@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.NewAppointmentFragment"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="CREAR CITA"-->
+        <!--android:textSize="25dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/colorPrimaryDarkBarber"-->
+        <!--android:layout_marginLeft="100dp"-->
+        <!--android:padding="20dp"/>-->
+
+
+
+    <LinearLayout
+        android:id="@+id/EmployeeSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_star"
+            android:textColor="#FFFF" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnerEmployees"
+            android:layout_width="match_parent"
+            android:hint="Barbero"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ServiceSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"       >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_scissors"
+
+            />
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnerservice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Servicio"
+            android:layout_marginLeft="20dp"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/CalendarSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/ServiceSection"
+        android:layout_marginBottom="20dp"
+        >
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calendarHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:textColorNormal="@color/cardview_shadow_start_color"
+            app:textColorSelected="@color/colorAccentBarber"/>
+    </LinearLayout>
+
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+    android:layout_below="@+id/CalendarSection"
+    android:layout_marginBottom="20dp">
+
+
+        <TextView android:id="@+id/watchIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_outline_query_builder_24px"
+            />
+        <ProgressBar
+            android:id="@+id/horary_progress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="gone" />
+
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnertime"
+            android:layout_width="match_parent"
+            android:hint="Hora"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/ic_baseline_account_circle_24px"
+            />
+        <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+            android:id="@+id/spinnercustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cliente"
+            android:layout_marginLeft="20dp"
+            android:spinnerMode="dropdown" />
+
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginBottom="20dp"
+     >
+
+
+    <Button
+        android:id="@+id/btnSaveNewAppointment"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccentBarber"
+        android:text="AGENDAR CITA"
+        android:textColor="#FFF"
+        />
+   </LinearLayout>
+
+</LinearLayout>
